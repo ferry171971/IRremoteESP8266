@@ -299,6 +299,7 @@ IRTEXT_CONST_STRING(kToshibaGenericRemoteAStr, D_STR_TOSHIBAGENERICREMOTEA);
 // "TOSHIBA REMOTE A"
 IRTEXT_CONST_STRING(kToshibaGenericRemoteBStr, D_STR_TOSHIBAGENERICREMOTEB);
 // "TOSHIBA REMOTE B"
+IRTEXT_CONST_STRING(kWtc801pStr, D_STR_WTC801);
 
 #define D_STR_UNSUPPORTED "?"  // Unsupported protocols will be showing as
                                // a question mark, check for length > 1
@@ -563,6 +564,8 @@ IRTEXT_CONST_BLOB_DECL(kAllProtocolNamesStr) {
             D_STR_BLUESTARHEAVY, D_STR_UNSUPPORTED) "\x0"
     COND(DECODE_EUROM || SEND_EUROM,
             D_STR_EUROM, D_STR_UNSUPPORTED) "\x0"
+    COND(DECODE_WTC801 || SEND_WTC801,
+            D_STR_WTC801, D_STR_UNSUPPORTED) "\x0"
     ///< New protocol (macro) strings should be added just above this line.
     "\x0"  ///< This string requires double null termination.
 };

@@ -254,5 +254,6 @@ extern IRTEXT_CONST_PTR(kYesStr);
 extern IRTEXT_CONST_PTR(kYx1fsfStr);
 extern IRTEXT_CONST_PTR(kZoneFollowStr);
 extern IRTEXT_CONST_PTR(kAllProtocolNamesStr);
+extern IRTEXT_CONST_PTR(kWtc801pStr);
 
 #endif  // IRTEXT_H_

@@ -898,6 +898,12 @@ class IRrecv {
                    const uint16_t nbits = kEuromBits,
                    const bool strict = true);
 #endif  // DECODE_EUROM
+#if DECODE_WTC801
+  bool decodeWtc801(decode_results *results, 
+                    uint16_t offset = kStartOffset,
+                    const uint16_t nbits = kWtc801Bits,
+                    const bool strict = true);
+#endif // DECODE_WTC801   
 };
 
 #endif  // IRRECV_H_

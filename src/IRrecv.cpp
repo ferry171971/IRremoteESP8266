@@ -1227,6 +1227,10 @@ bool IRrecv::decode(decode_results *results, irparams_t *save,
     DPRINTLN("Attempting Eurom decode");
     if (decodeEurom(results, offset, kEuromBits)) return true;
 #endif  // DECODE_EUROM
+#if DECODE_WTC801
+    DPRINTLN("Attempting WTC801 decode");
+    if (decodeWtc801(results, offset)) return true;
+#endif    
   // Typically new protocols are added above this line.
   }
 #if DECODE_HASH
