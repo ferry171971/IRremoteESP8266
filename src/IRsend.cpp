@@ -655,6 +655,7 @@ uint16_t IRsend::defaultBits(const decode_type_t protocol) {
     case SAMSUNG:
     case SHERWOOD:
     case WHYNTER:
+    case WTC801:
       return 32;
     case AIRWELL:
       return 34;
@@ -1147,6 +1148,11 @@ bool IRsend::send(const decode_type_t type, const uint64_t data,
       sendZepeal(data, nbits, min_repeat);
       break;
 #endif  // SEND_ZEPEAL
+#if SEND_WTC801
+    case WTC801:
+      sendWtc801(data, nbits, min_repeat);
+    break;
+#endif
     default:
       return false;
   }

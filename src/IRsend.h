@@ -909,6 +909,11 @@ class IRsend {
                  const uint16_t nbytes = kEuromStateLength,
                  const uint16_t repeat = kNoRepeat);
 #endif  // SEND_EUROM
+#if SEND_WTC801
+  void sendWtc801(const uint64_t data, 
+                  const uint16_t nbits = kWtc801Bits,
+                  const uint16_t repeat = kWtc801DefaultRepeat);
+#endif  // SEND_WTC801
 
  protected:
 #ifdef UNIT_TEST
